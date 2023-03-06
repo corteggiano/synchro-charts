@@ -1,3 +1,3 @@
-import { StatusTimeline } from "@synchro-charts/react";
+import { StatusTimeline } from "@iot-app-kit-visualizations/react";
 
 export default StatusTimeline

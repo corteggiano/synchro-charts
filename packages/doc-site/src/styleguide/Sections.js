@@ -1,7 +1,7 @@
-import '@synchro-charts/core/dist/synchro-charts/synchro-charts.css';
+import '@iot-app-kit-visualizations/core/dist/iot-app-kit-visualizations/iot-app-kit-visualizations.css';
 import React from 'react';
 import DefaultSectionsRenderer from 'react-styleguidist/lib/client/rsg-components/Sections/SectionsRenderer';
-import { WebglContext } from '@synchro-charts/react';
+import { WebglContext } from '@iot-app-kit-visualizations/react';
 import './Sections.css';
 
 const Sections = ({ children }) => {

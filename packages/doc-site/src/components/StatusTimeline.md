@@ -1,5 +1,5 @@
 ```jsx
-import { LEGEND_POSITION, DataType, COMPARISON_OPERATOR, StreamType } from '@synchro-charts/core';
+import { LEGEND_POSITION, DataType, COMPARISON_OPERATOR, StreamType } from '@iot-app-kit-visualizations/core';
 const MONTH_RESOLUTION = 1000 * 60 * 60 * 24 * 30; // one month
 <div style={{ width: '100%', height: '300px' }}>
   <StatusTimeline
@@ -107,7 +107,7 @@ alarms={{ expires: 1000 * 60 * 60 * 24 * 30 }}
 ```
 
 ```jsx
-import { LEGEND_POSITION, DataType, COMPARISON_OPERATOR, StreamType } from '@synchro-charts/core';
+import { LEGEND_POSITION, DataType, COMPARISON_OPERATOR, StreamType } from '@iot-app-kit-visualizations/core';
 const MONTH_RESOLUTION = 1000 * 60 * 60 * 24 * 30; // one month
 <div style={{ width: '100%', height: '300px' }}>
   <StatusTimeline

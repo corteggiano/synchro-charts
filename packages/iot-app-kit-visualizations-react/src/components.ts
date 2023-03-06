@@ -3,9 +3,9 @@
 /* auto-generated react proxies */
 import { createReactComponent } from './react-component-lib';
 
-import { JSX } from '@synchro-charts/core';
+import { JSX } from '@iot-app-kit-visualizations/core';
 
-import { defineCustomElements, applyPolyfills } from '@synchro-charts/core/dist/loader';
+import { defineCustomElements, applyPolyfills } from '@iot-app-kit-visualizations/core/dist/loader';
 
 applyPolyfills().then(() => defineCustomElements());
 export const LineChart = /*@__PURE__*/createReactComponent<JSX.ScLineChart, HTMLScLineChartElement>('sc-line-chart');

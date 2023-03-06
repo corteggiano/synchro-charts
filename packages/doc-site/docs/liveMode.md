@@ -1,5 +1,5 @@
 ```jsx
-import {LineChart} from "@synchro-charts/react";
+import {LineChart} from "@iot-app-kit-visualizations/react";
 
 const DAY_RESOLUTION = 1000 * 60 * 60 * 24; // one day
 <div style={{width: "900px", height: "400px"}}>

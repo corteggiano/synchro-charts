@@ -1,5 +1,5 @@
 import { DAY_IN_MS } from "./dateUtil";
-import { DataType } from "@synchro-charts/core";
+import { DataType } from "@iot-app-kit-visualizations/core";
 
 export const getY = (x, duration) =>
   Math.sin(x / (duration * 8)) * 15 +

@@ -2,12 +2,12 @@ import React from 'react';
 import Button from "@awsui/components-react/button";
 import ButtonDropdown from "@awsui/components-react/button-dropdown";
 import Input from "@awsui/components-react/input";
-import { LineChart, BarChart, ScatterChart } from '@synchro-charts/react';
-import { LEGEND_POSITION,COMPARISON_OPERATOR, TREND_TYPE } from '@synchro-charts/core';
-import {DAY_IN_MS}  from "./dateUtil";
-import {getRandomData} from "./dataUtil";
+import { LineChart, BarChart, ScatterChart } from '@iot-app-kit-visualizations/react';
+import { LEGEND_POSITION, COMPARISON_OPERATOR, TREND_TYPE } from '@iot-app-kit-visualizations/core';
+import { DAY_IN_MS } from "./dateUtil";
+import { getRandomData } from "./dataUtil";
 import ThresholdListItem from './ThresholdListItem';
-import {isNumeric} from "./util";
+import { isNumeric } from "./util";
 import TrendLineListItem from "./TrendLineListItem";
 import { v4 } from 'uuid';
 
@@ -24,7 +24,7 @@ const pallet = ['#0073bb', '#dd6b10', '#1d8102', '#8b3333'];
 const DEFAULT_TAG = 'lineChart';
 
 const streams = [...Array(2)].map((_, i) => {
-  const data=  getRandomData({
+  const data = getRandomData({
     start: new Date(1998, 0, 0),
     end: new Date(2000, 0, 1),
     streamId: `some-id-${i}`,
@@ -135,7 +135,7 @@ export class Demo extends React.Component {
     }
   }
 
-  get config () {
+  get config() {
     return this.state.config;
   }
 
@@ -200,8 +200,8 @@ export class Demo extends React.Component {
   };
 
   getThresholds = () =>
-  this.state.annotations && this.state.annotations.y ?
-    this.state.annotations.y.filter(t => t.comparisonOperator != null) : [];
+    this.state.annotations && this.state.annotations.y ?
+      this.state.annotations.y.filter(t => t.comparisonOperator != null) : [];
 
   // checks if threshold exists with the selected value and comparison operator
 
@@ -236,7 +236,7 @@ export class Demo extends React.Component {
   };
 
   saveThreshold = () => {
-    const {annotationColor,annotationValue, annotationComp, annotationEditable, annotationLabel } = this.state;
+    const { annotationColor, annotationValue, annotationComp, annotationEditable, annotationLabel } = this.state;
     const threshold = {
       id: v4(),
       color: annotationColor,
@@ -354,7 +354,7 @@ export class Demo extends React.Component {
   };
 
   trendOptions = () => {
-    return this.config.dataStreams.map(({id, name}) => {
+    return this.config.dataStreams.map(({ id, name }) => {
       return {
         id,
         text: name,
@@ -369,7 +369,7 @@ export class Demo extends React.Component {
       return 'Please select a trend';
     }
 
-    return this.config.dataStreams.find(({id}) => id === trendDataId).name;
+    return this.config.dataStreams.find(({ id }) => id === trendDataId).name;
   }
 
   removeTrend = (dataStreamId, trendType) => {
@@ -400,12 +400,12 @@ export class Demo extends React.Component {
     const ChartName = components[this.state.componentTag];
     return (
       <div style={{ fontSize: '1.3rem' }}>
-        <div style={{display: 'flex'}}>
+        <div style={{ display: 'flex' }}>
           <label htmlFor="display">
             <strong>Display: </strong>
             <ButtonDropdown items={CHART_OPTIONS} onItemClick={this.changeComponent}>{this.currentChartOption()}</ButtonDropdown>
           </label>
-          <div style={{flexGrow: '1'}}/>
+          <div style={{ flexGrow: '1' }} />
           <div>
             <Button onClick={this.addStream}>
               Add Data
@@ -417,7 +417,7 @@ export class Demo extends React.Component {
             {' '}
           </div>
         </div>
-        <div style={{display: 'flex', flexWrap: 'wrap'}}>
+        <div style={{ display: 'flex', flexWrap: 'wrap' }}>
           {new Array(this.state.numCharts).fill(0).map(i => (
             <div
               key={i}
@@ -430,7 +430,7 @@ export class Demo extends React.Component {
             >
               <ChartName
                 widgetId={this.config.widgetId + i.toString()}
-                viewport={{...this.config.viewport, duration: this.duration, group: 'DEMO_GROUP'}}
+                viewport={{ ...this.config.viewport, duration: this.duration, group: 'DEMO_GROUP' }}
                 legend={this.config.legend}
                 dataStreams={this.config.dataStreams}
                 annotations={this.state.annotations}
@@ -458,9 +458,9 @@ export class Demo extends React.Component {
                     onChange={this.changeAnnotationColor}
                   />
                 </td>
-                <td style={{ maxWidth: '80px'}}>
+                <td style={{ maxWidth: '80px' }}>
                   <Input
-                    {...(this.state.annotationComp !== COMPARISON_OPERATOR.EQUAL && {type: 'number'})}
+                    {...(this.state.annotationComp !== COMPARISON_OPERATOR.EQUAL && { type: 'number' })}
                     onChange={this.changeAnnotationValue}
                     value={this.state.annotationValue}
                   />
@@ -475,7 +475,7 @@ export class Demo extends React.Component {
                     {this.currentDraggableOption()}
                   </ButtonDropdown>
                 </td>
-                <td style={{ maxWidth: '220px'}}>
+                <td style={{ maxWidth: '220px' }}>
                   <Input
                     onChange={this.changeAnnotationLabel}
                     value={this.state.annotationLabel}
@@ -489,14 +489,14 @@ export class Demo extends React.Component {
               </tr>
               {this.getThresholds().map((threshold, i) => {
                 return (
-                  <ThresholdListItem threshold={threshold} thresholdId={i} removeThreshold={this.removeThreshold} key={`${threshold.id}`}/>
+                  <ThresholdListItem threshold={threshold} thresholdId={i} removeThreshold={this.removeThreshold} key={`${threshold.id}`} />
                 );
               })}
             </table>
           </div>
         </div>
         <div className="configurations">
-        <div>
+          <div>
             <h2>Trends</h2>
             <table className="configuration-table">
               <tr>

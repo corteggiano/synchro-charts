@@ -1,5 +1,5 @@
 ```jsx
-import { ScatterChart } from "@synchro-charts/react";
+import { ScatterChart } from "@iot-app-kit-visualizations/react";
 <div style={{ width: '100%', height: '500px' }}>
   <ScatterChart
     trends={[{

@@ -10,7 +10,7 @@ Interact with the charts below using the following gestures:
 Below is an example of synchronizing a group of charts containing half a million data points synchronized across 9 charts:
 
 ```jsx
-import { ScatterChart } from "@synchro-charts/react";
+import { ScatterChart } from "@iot-app-kit-visualizations/react";
 
 const NUM_CHARTS = 9;
 const NUM_POINTS = Math.round(500000 / NUM_CHARTS);

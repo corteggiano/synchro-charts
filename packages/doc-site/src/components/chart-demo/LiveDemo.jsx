@@ -1,7 +1,7 @@
 import React from 'react';
-import { LineChart, StatusTimeline } from '@synchro-charts/react';
-import {COMPARISON_OPERATOR, DataType, StreamType} from '@synchro-charts/core';
-import {MINUTE_IN_MS, SECOND_IN_MS} from "./dateUtil";
+import { LineChart, StatusTimeline } from '@iot-app-kit-visualizations/react';
+import { COMPARISON_OPERATOR, DataType, StreamType } from '@iot-app-kit-visualizations/core';
+import { MINUTE_IN_MS, SECOND_IN_MS } from "./dateUtil";
 
 const pallet = ['#0073bb', '#6b8ea5'];
 
@@ -78,18 +78,18 @@ const alarmStatusStreams = [{
 
 
 const propertyAnnotations = {
-    y: [
-      {
+  y: [
+    {
       color: '#d13212',
       value: -80,
-        showValue: true,
-        label: 'Alert',
+      showValue: true,
+      label: 'Alert',
       comparisonOperator: COMPARISON_OPERATOR.LESS_THAN_EQUAL,
     }, {
       color: '#ff9900',
       showValue: true,
       value: -60,
-        label: 'Warning',
+      label: 'Warning',
       comparisonOperator: COMPARISON_OPERATOR.LESS_THAN_EQUAL,
     },
     {
@@ -157,7 +157,7 @@ export class LiveDemo extends React.Component {
     dataStream1.data = [...dataStream1.data, { x, y: y1 }];
     dataStream2.data = [...dataStream2.data, { x: x, y: y2 }];
 
-    alarmStream1.data = [...alarmStream1.data, { x, y: alarmStatus( y1 ) }];
+    alarmStream1.data = [...alarmStream1.data, { x, y: alarmStatus(y1) }];
     alarmStream2.data = [...alarmStream2.data, { x: x, y: alarmStatus(y2) }];
 
     this.setState({ dataStreams: [dataStream1, dataStream2], alarmStatusStreams: [alarmStream1, alarmStream2] });

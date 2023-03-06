@@ -21,7 +21,7 @@
 2. Initialize components if you are not using the react wrapper
 
     ```js static
-    import { defineComponents, applyPolyfill } from '@synchro-charts/core/dist/loader';
+    import { defineComponents, applyPolyfill } from '@iot-app-kit-visualizations/core/dist/loader';
 
     applyPolyfill().then(() => defineComponents());
     ```

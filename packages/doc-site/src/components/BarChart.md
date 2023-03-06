@@ -75,7 +75,7 @@ You can show the current latest alarm status on the legend through setting the `
 
 Learn how to display the alarms value as a threshold [here](/#section-threshold)
 ```jsx
-import { DataType, COMPARISON_OPERATOR, StatusIcon } from '@synchro-charts/core';
+import { DataType, COMPARISON_OPERATOR, StatusIcon } from '@iot-app-kit-visualizations/core';
 <div style={{ width: '100%', height: '500px' }}>
   <BarChart
     widgetId="widget-id"

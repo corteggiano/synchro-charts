@@ -1,5 +1,5 @@
 ```jsx
-import { LineChart, ScatterChart, BarChart } from "@synchro-charts/react";
+import { LineChart, ScatterChart, BarChart } from "@iot-app-kit-visualizations/react";
 
 const DAY_RESOLUTION = 1000 * 60 * 60 * 24; // one day
 const style = { width: '100%' };
@@ -162,7 +162,7 @@ When there are no thresholds, passing in the threshold options will not affect a
 ### Draggable annotations 
 
 ```jsx
-import { LineChart, ScatterChart, BarChart } from "@synchro-charts/react";
+import { LineChart, ScatterChart, BarChart } from "@iot-app-kit-visualizations/react";
 
 const DAY_RESOLUTION = 1000 * 60 * 60 * 24; // one day
 const style = { width: '100%' };

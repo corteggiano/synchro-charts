@@ -1,5 +1,5 @@
 ```jsx
-import { LineChart, ScatterChart, BarChart } from "@synchro-charts/react";
+import { LineChart, ScatterChart, BarChart } from "@iot-app-kit-visualizations/react";
 
 const DAY_RESOLUTION = 1000 * 60 * 60 * 24; // one day
 const style = { width: '100%' };
@@ -189,7 +189,7 @@ Alternatively, you may pass in a boolean `false` into the `thresholdOptions` to 
 ### Draggable thresholds
 
 ```jsx
-import { LineChart, ScatterChart, BarChart } from "@synchro-charts/react";
+import { LineChart, ScatterChart, BarChart } from "@iot-app-kit-visualizations/react";
 
 const DAY_RESOLUTION = 1000 * 60 * 60 * 24; // one day
 const style = { width: '100%' };
@@ -341,7 +341,7 @@ If you have two thresholds that has the same comparison operator pointing upward
 then you will create threshold bands. 
 
 ```jsx
-import { LineChart, ScatterChart, BarChart } from "@synchro-charts/react";
+import { LineChart, ScatterChart, BarChart } from "@iot-app-kit-visualizations/react";
 
 const style = { width: '100%' }; 
 const annotations = {
@@ -417,7 +417,7 @@ const dataStreams = [{
 Here is an example of threshold with negative threshold values and with the same comparison operators pointing downwards.
 
 ```jsx
-import { LineChart, ScatterChart, BarChart } from "@synchro-charts/react";
+import { LineChart, ScatterChart, BarChart } from "@iot-app-kit-visualizations/react";
 
 const style = { width: '100%' }; 
 const annotations = {
@@ -496,7 +496,7 @@ Notice that the upper threshold's color overrides the lower threshold's color.
 The lower threshold's color will take effect past the upper threshold when the upper threshold no longer applies.
 
 ```jsx
-import { LineChart, ScatterChart, BarChart } from "@synchro-charts/react";
+import { LineChart, ScatterChart, BarChart } from "@iot-app-kit-visualizations/react";
 
 const style = { width: '100%' }; 
 const annotations = {
@@ -573,7 +573,7 @@ Notice that the threshold color with greater negative value overrides the lesser
 
 The upper threshold's color will take effect below the lower threshold when the lower threshold no longer applies.
 ```jsx
-import { LineChart, ScatterChart, BarChart } from "@synchro-charts/react";
+import { LineChart, ScatterChart, BarChart } from "@iot-app-kit-visualizations/react";
 
 const style = { width: '100%' }; 
 const annotations = {
@@ -684,8 +684,8 @@ If the threshold value is a string or an array of strings, the `comparisonOperat
 Threshold strings and arrays of strings are only supported on the `StatusTimeline` component.
 
 ```jsx
-import { Table } from "@synchro-charts/react";
-import { LEGEND_POSITION, DataType, COMPARISON_OPERATOR } from '@synchro-charts/core';
+import { Table } from "@iot-app-kit-visualizations/react";
+import { LEGEND_POSITION, DataType, COMPARISON_OPERATOR } from '@iot-app-kit-visualizations/core';
 const windTableColumn = {
   header: 'Wind temperature',
   rows:[
