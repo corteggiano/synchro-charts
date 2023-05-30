@@ -3,6 +3,30 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.10.0](https://github.com/corteggiano/synchro-charts/compare/iot-app-kit-visualizations-v1.9.1...iot-app-kit-visualizations-v1.10.0) (2023-05-30)
+
+
+### Features
+
+* charts accept aggregationType ([1be63e2](https://github.com/corteggiano/synchro-charts/commit/1be63e2151b86e055471f56dbe50508045d93eeb))
+* **iot-app-kit-vis:** replace dateChanged event emitter with setViewport ([#264](https://github.com/corteggiano/synchro-charts/issues/264)) ([804d0f9](https://github.com/corteggiano/synchro-charts/commit/804d0f9cee5cbb6f53eeb1db68ea9a4b4f3a57b2))
+* portal tooltips ([d4a287e](https://github.com/corteggiano/synchro-charts/commit/d4a287ee55325d69a725899341c897831ce87231))
+* rename any sc- components to iot-app-kit-vis- ([#260](https://github.com/corteggiano/synchro-charts/issues/260)) ([657efab](https://github.com/corteggiano/synchro-charts/commit/657efab572009969bd6b450c4e84e99a47c45b92))
+* rename core pckg to iot-app-kit/charts-core ([773775a](https://github.com/corteggiano/synchro-charts/commit/773775a21a6ce5977b73ae2c32d4671c5055b126))
+
+
+### Bug Fixes
+
+* add left position to tooltip ([5a40e42](https://github.com/corteggiano/synchro-charts/commit/5a40e4271bce80cf82c9e3d4f896a8558a96275e))
+* **base-chart:** fix gesture+live mode bug and throttle ([da96931](https://github.com/corteggiano/synchro-charts/commit/da969319fd474000c2096194265ed43cb3b60231))
+* check if data is loading for unsupported types ([b9d3f64](https://github.com/corteggiano/synchro-charts/commit/b9d3f643f7ce6559233a69ebb81a3ed01e91f83c))
+* **core:** refactor listener registration for tooltip ([b37b0f2](https://github.com/corteggiano/synchro-charts/commit/b37b0f20328c102d627c50506e041622501dc2b7))
+* **core:** refactor webgl positioning to account for webglcontext viewframe ([01e161e](https://github.com/corteggiano/synchro-charts/commit/01e161e12bab09f5e0ef2d9a90b7a136b63bb065))
+* hide legend and error state on loading or empty state ([6f2ae53](https://github.com/corteggiano/synchro-charts/commit/6f2ae534e252118356efb2584b48cbe37fe265bb))
+* **legend:** fix name and unit gap in legend ([25fd79c](https://github.com/corteggiano/synchro-charts/commit/25fd79c35c5e3cf3e296c81cdd6ca2e94fd5d950))
+* unsupported data check if loading ([f5ea4a9](https://github.com/corteggiano/synchro-charts/commit/f5ea4a93f9079c6a91a4ca5d87407272cbbf6374))
+* **visualizations:** use passed in label in status-timeline component ([86d3172](https://github.com/corteggiano/synchro-charts/commit/86d3172c46a6392b0d4a015ba59b67c9c69c071c))
+
 ## [1.9.1](https://github.com/awslabs/synchro-charts/compare/iot-app-kit-visualizations-v1.9.0...iot-app-kit-visualizations-v1.9.1) (2023-05-24)
 
 
